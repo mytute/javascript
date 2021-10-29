@@ -252,7 +252,53 @@ function my(message, print){
 }
 my.call( {name:  "kangaroo"}, "message", "print");    
 
+###  Destructuring
 
+Object >  extract individual values from object    
+
+```javascript
+
+   const person={
+       name:'samadhi',
+       age:31,
+       country="sri lanka"
+   }
+
+   let {name, age, country="russia"} = person;
+   console.log(name) // samadhi
+   console.log(age) // 31
+
+   function print({name, age}){
+       console.log(name); // samadhi
+       console.log(age); // 31
+       console.log(country) // sri lanka
+   }
+   print(person);
+   
+```
+
+Array > extract individual values from array    
+
+```javascript
+   let numbers = [1, 2, 3];
+
+   let [one, two, three= 200] = numbers;
+
+   console.log(one); // 1
+   console.log(two); // 2
+   console.log(three); // 3
+
+
+   function bottle(){
+       return ['Bottle', 'water'];
+   }
+
+   let [red, blue]= bottle();
+   console.log(red); // bottle
+   console.log(blue); // water
+
+
+```
 
 ### OOP programming   
 
