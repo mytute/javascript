@@ -274,7 +274,7 @@ Object >  extract individual values from object
        console.log(country) // sri lanka
    }
    print(person);
-   
+
 ```
 
 Array > extract individual values from array    
@@ -332,7 +332,34 @@ t1.print();
 console.log(t1.name)
 ```
 
+## Event loop
 
+since javascript is single thread application there is a one thread that execute everything on the page.     
+When we have multiple events to execute then events will store in to "Event queue" and it will execute one by one.      
+Call Stack > when in event have multiple events(functions) it will manage by stack data structure and work as one event in  "Event queue".      
+
+## diffrent between Promises vs Observables
+
+Observable is better. It has all Promises features plus extra features.
+
+Promises:    
+
+    One time use "Return data once"     
+    No cancel    
+    One listener    
+    No socket support    
+
+Observables:    
+
+    Return data many times as data change    
+    Support cancel    
+    Support socket    
+    Support many listeners and notify them when data change    
+    Support map, filter, and reduce    
+
+## how works node.js
+
+Node.js is an asynchronous event-driven JavaScript runtime
 
 string interpolation  = `string text ${expression} string text`   
 api = appication programming interface    
