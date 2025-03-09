@@ -23,4 +23,23 @@ All http requests are texts and so in order to work with javascript, body of pos
 Helmet: A security module that adds HTTP headers for protection.  
 * X-Frame-Options: Prevents clickjacking attacks.  
 * Cross-Site Scripting (XSS) Protection: Mitigates XSS attacks.   
-* Strict Transport Security (HSTS): Forces HTTPS for secure communication.  
+* Strict Transport Security (HSTS): Forces HTTPS for secure communication.
+
+6. Difference of Node.js Compared to Other Technologies
+* Non-blocking & Asynchronous: Unlike traditional web servers, Node.js uses an event-driven, non-blocking I/O model, making it fast and efficient.  
+* Single Programming Language: Uses JavaScript for both frontend and backend, simplifying development.  
+* Lightweight & Scalable: Handles many connections efficiently, making it great for real-time apps like chat apps, streaming, and APIs.
+
+7. Why is Node.js Best for Web Development?
+  * Fast Performance (Powered by V8 engine)  
+  * Handles High Traffic Efficiently  
+  * Large Ecosystem (NPM) for easy package management  
+  * Perfect for Real-Time Applications like chat, gaming, and APIs
+
+8. How Does Node.js Handle High Traffic Efficiently?  
+  * Non-blocking I/O: Handles multiple requests at the same time without waiting.  
+  * Event-Driven Architecture: Uses events and callbacks instead of creating multiple threads.  
+  * Single-Threaded with Async Processing: Uses a single thread with event loop to manage thousands of connections.  
+  * Load Balancing: Can use cluster module to run multiple instances and distribute traffic.  
+  * Efficient Resource Utilization: Uses fewer system resources compared to traditional multi-threaded servers.  
+
