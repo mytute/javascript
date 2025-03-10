@@ -42,4 +42,18 @@ Redux follows a unidirectional data flow. Components send requests (actions), a 
 "Imagine you are editing a document. Instead of printing a new copy for every small change, you make edits on a draft first, compare the changes, and then update only the necessary parts in the final version. The Virtual DOM works similarly—it updates changes in memory first and then applies only the needed updates to the real DOM."
 
 🔹 Step 3: Explain the Benefit
-"Updating the real DOM directly is slow. The Virtual DOM makes changes faster by reducing unnecessary updates, improving performance, and making React apps smoother."
+"Updating the real DOM directly is slow. The Virtual DOM makes changes faster by reducing unnecessary updates, improving performance, and making React apps smoother."  
+
+
+4. SOLID   
+O - Open/Closed Principle
+"Software should be open for extension but closed for modification, meaning we can add new functionality without changing existing code."
+
+L - Liskov Substitution Principle
+"Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program."
+
+I - Interface Segregation Principle
+"Clients should not be forced to implement interfaces they don't use. Split large interfaces into smaller, more specific ones."
+
+D - Dependency Inversion Principle
+"High-level modules should not depend on low-level modules. Both should depend on abstractions. This promotes loose coupling."
