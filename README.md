@@ -230,8 +230,37 @@ Helmet: A security module that adds HTTP headers for protection.
         When expired, it exchanges the refresh token for a new access token.
         If both tokens expire, the user is asked to log in again.
 
+19. call() apply() .bind() functions in javascript
+    * .call() – Calls the function immediately with this and arguments passed individually.  
+    * .apply() – Calls the function immediately but arguments are passed as an array.  
+    * .bind() – Returns a new function with this permanently set. It doesn't call the function immediately.  
+    ```js
+    const person = { name: "Sam" };
 
+    function greet(greeting) {
+      console.log(`${greeting}, ${this.name}`);
+    }
+    
+    greet.call(person, "Hello"); // Output: Hello, Sam
+    greet.apply(person, ["Hi"]); // Output: Hi, Sam
+    const greetSam = greet.bind(person, "Hey");
+    greetSam(); // Output: Hey, Sam
+    ```
 
-
+20. Event Loop
+    🟢 Step 1: Call Stack (Main Execution)
+    "Think of the Call Stack as a stack of plates. Each function that is called is like placing a plate on top. When a function completes, we remove that plate from the stack. JavaScript runs code one by one in this stack (synchronous execution)."   
+    
+    🟢 Step 2: Web API (Background Workers)
+    "Now, when we encounter something time-consuming, like a network request or a timer, we offload it to the Web API. These are like background workers who take care of long-running tasks while the Call Stack continues working on other things."   
+    
+    🟢 Step 3: Event Queue (Waiting Area)
+    "Once the Web API finishes its task, the result doesn’t immediately go back to the Call Stack. Instead, it’s placed in the Event Queue, which acts like a waiting line, holding completed tasks until JavaScript is ready to process them."   
+    
+    🟢 Step 4: Event Loop (The Gatekeeper)
+    "Now, we have the Event Loop, which is like a traffic controller. It continuously checks: ‘Is the Call Stack empty?’ If yes, it takes the first task from the Event Queue and moves it to the Call Stack for execution."   
+    
+    🟢 Step 5: Microtasks (High Priority Queue)
+    "There’s also something called the Microtask Queue (for Promises). It has a higher priority than the Event Queue, meaning it gets processed first before handling other tasks."    
   
-event loop   
+
