@@ -247,8 +247,8 @@ Helmet: A security module that adds HTTP headers for protection.
     greetSam(); // Output: Hey, Sam
     ```
 
-20. Event Loop
-    🟢 Step 1: Call Stack (Main Execution)
+20. Event Loop, Call stack, Web api, Event queue    
+    🟢 Step 1: Call Stack (Main Execution)   
     "Think of the Call Stack as a stack of plates. Each function that is called is like placing a plate on top. When a function completes, we remove that plate from the stack. JavaScript runs code one by one in this stack (synchronous execution)."   
     
     🟢 Step 2: Web API (Background Workers)
